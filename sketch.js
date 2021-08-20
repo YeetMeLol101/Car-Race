@@ -8,16 +8,18 @@ var database;
 
 var form, player, game;
 
-var cars, car1, car2, car3, car4, car1IMG, car2IMG, car3IMG, car4IMG;
-var track, trackIMG, ground, groundIMG;
+var cars, car1, car2, car3, car4;
+var circle1,circle2,circle3,circle4;
+
+var track, car1_img, car2_img, car3_img, car4_img;
 
 function preload(){
-  car1IMG = loadImage("images/car1.png");
-  car2IMG = loadImage("images/car2.png");
-  car3IMG = loadImage("images/car3.png");
-  car4IMG = loadImage("images/car4.png");
-  trackIMG = loadImage("images/track.jpg");
-  groundIMG = loadImage("images/ground.png");
+  track = loadImage("./images/track.jpg");
+  car1_img = loadImage("./images/car1.png");
+  car2_img = loadImage("./images/car2.png");
+  car3_img = loadImage("./images/car3.png");
+  car4_img = loadImage("./images/car4.png");
+  ground = loadImage("./images/ground.png");
 }
 
 function setup(){
@@ -37,4 +39,8 @@ function draw(){
     clear();
     game.play();
   }
+  if(gameState === 2){
+    game.end();
+  }
+
 }
